@@ -19,9 +19,9 @@
 
 	var fullHeight = function() {
 
-		$('.js-fullheight').css('height', $(window).height());
+		$('.js-fullheight').css('height', $(window).height()-10);
 		$(window).resize(function(){
-			$('.js-fullheight').css('height', $(window).height());
+			$('.js-fullheight').css('height', $(window).height()-10);
 		});
 
 	};
@@ -87,7 +87,7 @@
 		$('.home-slider').owlCarousel({
 	    loop:true,
 	    autoplay: true,
-	    margin:0,
+	    margin:5,
 	    animateOut: 'fadeOut',
 	    animateIn: 'fadeIn',
 	    nav:false,
@@ -130,7 +130,7 @@
 
 
 	$('#dropdown04').on('show.bs.dropdown', function () {
-	  console.log('show');
+	  //console.log('show');
 	});
 
 	// scroll
