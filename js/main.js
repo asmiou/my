@@ -15,7 +15,16 @@
     hideDistantElements: false,
     scrollProperty: 'scroll'
   });
-
+	// Fermer le menu lorsqu'un lien est cliqué
+	$(document).on('click', '.navbar-collapse.show', function (e) {
+		var btn_menu = $(this).closest('#btn_menu');
+		var div_menu = $('.navbar-collapse');
+		console.log(btn_menu);
+		if (!btn_menu.hasClass('collapsed')) {
+			btn_menu.attr('aria-expanded', false)
+			div_menu.removeClass('show')
+		}
+	});
 
 	var fullHeight = function() {
 
